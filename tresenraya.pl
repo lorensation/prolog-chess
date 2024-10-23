@@ -1,5 +1,5 @@
 %Definicion del tablero de juego 3x3
-tablero([[_ , _ , _], [_ , _ , _], [_ , _ , _]]).
+tablero([[vacio, vacio, vacio], [vacio, vacio, vacio], [vacio, vacio, vacio]]).
 
 %Definicion de los jugadores
 jugador(x).
@@ -19,3 +19,18 @@ victoria(Tablero, Jugador) :- Tablero = [[_, _, Jugador], [_, _, Jugador], [_, _
 victoria(Tablero, Jugador) :- Tablero = [[Jugador, _, _], [_, Jugador, _], [_, _, Jugador]].
 victoria(Tablero, Jugador) :- Tablero = [[_, _, Jugador], [_, Jugador, _], [Jugador, _, _]].
 
+% Definicion de las condiciones de empate
+empate(Tablero) :-
+    tablero_lleno(Tablero),
+    not(victoria(Tablero, _)).
+
+% Verificacion de que el tablero este lleno
+tablero_lleno([]).
+tablero_lleno([Fila|Resto]) :-
+    fila_llena(Fila),
+    tablero_lleno(Resto).
+
+fila_llena([]).
+fila_llena([Casilla|Resto]) :-
+    Casilla \= vacio,
+    fila_llena(Resto).
