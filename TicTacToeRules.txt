@@ -1,0 +1,12 @@
+
+1 - Tablero: El juego se desarrolla en un tablero de 3x3, con 9 posiciones posibles.
+
+2 - Jugadores: Participan dos jugadores, cada uno eligiendo una marca: 'X' o 'O'. Los jugadores se turnan para jugar.
+
+3 - Turnos: En cada turno, un jugador coloca su marca en una de las posiciones vacías del tablero.
+
+4 - Objetivo: El objetivo es conseguir una línea continua de tres marcas propias. Esta línea puede ser horizontal, vertical o diagonal.
+
+5 - Ganador: Un jugador gana si consigue alinear tres de sus marcas en una línea continua. El juego termina inmediatamente en caso de victoria.
+
+6 - Empate: Si todas las casillas están ocupadas y ningún jugador ha logrado alinear tres marcas, el juego termina en empate.
