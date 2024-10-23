@@ -1,2 +1,2 @@
-# prolog-chess
-Un proyecto de prolog sobre el ajedrez y sus reglas.
+# prolog-tic-tac-toe
+Un proyecto de prolog sobre el tres en raya y sus reglas.
